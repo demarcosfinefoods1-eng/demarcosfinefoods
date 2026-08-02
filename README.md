@@ -37,15 +37,15 @@ For automatic deployment, the included `.github/workflows/deploy.yml` publishes 
 
 ### Images
 
-Image URLs live in `src/data/store.ts`; the hero image is in `src/styles.css`. Replace an Unsplash URL with an optimized local image under `public/images/` when professional store photography is available. Use WebP or AVIF, keep hero images near 1920×1200, and keep gallery images below 250 KB where practical.
+Photo slots use stable `data-photo-key` values defined in `src/data/store.ts` and rendered by `src/components/PhotoPlaceholder.tsx`. Add optimized real DeMarco's photos under `public/images/`, then update `PhotoPlaceholder` to map each key to its corresponding image. Use WebP or AVIF, keep the hero near 1920×1200, and keep gallery images below 250 KB where practical.
 
 ### Google reviews
 
-The current testimonials are clearly labeled samples. Replace objects in the `reviews` array in `src/data/store.ts` with short excerpts from verified customer reviews. Confirm permission and accuracy before publishing customer names.
+The `GoogleReviews` component accepts typed Google review objects. Populate the `googleReviews` array in `src/data/store.ts` from a Google Business Profile integration or verified review export. Confirm permission and accuracy before publishing customer names.
 
 ### Hero image
 
-Update `.hero-image` in `src/styles.css`. Use a bright, welcoming photograph of the actual store or its produce displays. Keep the subject weighted toward the right so the headline remains readable on the left.
+Replace the `hero-storefront` photo slot with a bright, welcoming photograph of the actual DeMarco's storefront or produce displays. Keep the subject weighted toward the right so the headline remains readable on the left.
 
 ## Quality checks
 
