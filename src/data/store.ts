@@ -9,21 +9,33 @@ export const store = {
 }
 
 export const departments = [
-  { title: 'Fresh Produce', text: 'Crisp, colourful and ready for tonight’s table.', image: 'https://images.unsplash.com/photo-1610348725531-843dff563e2c?auto=format&fit=crop&w=1200&q=85', alt: 'Fresh colourful produce at a market' },
-  { title: 'Beer & Wine', text: 'A convenient local selection for dinner and gatherings.', image: 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1200&q=85', alt: 'Wine bottles in a premium shop' },
-  { title: 'Italian Foods', text: 'Pantry favourites and authentic flavours close to home.', image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1200&q=85', alt: 'Fresh Italian pasta dish' },
+  { title: 'Fresh Produce', text: 'Crisp, colourful and ready for tonight’s table.', photoKey: 'departments-produce', alt: "DeMarco's fresh produce display — store photo coming soon" },
+  { title: 'Beer & Wine', text: 'A convenient local selection for dinner and gatherings.', photoKey: 'departments-beer-wine', alt: "DeMarco's beer and wine selection — store photo coming soon" },
+  { title: 'Italian Foods', text: 'Pantry favourites and authentic flavours close to home.', photoKey: 'departments-italian', alt: "DeMarco's Italian foods selection — store photo coming soon" },
 ]
 
-export const reviews = [
-  { quote: 'A true neighbourhood gem. Fresh food, friendly faces, and everything I need in one stop.', name: 'Local Windsor shopper' },
-  { quote: 'The Italian selection keeps me coming back, and the service always feels personal.', name: 'Neighbourhood customer' },
-  { quote: 'Quick, convenient, and consistently fresh. My go-to market on the way home.', name: 'Regular customer' },
+export type GoogleReview = {
+  author: string
+  rating: number
+  text: string
+  relativeTime?: string
+}
+
+// Replace this array with verified reviews returned by your Google Business Profile integration.
+export const googleReviews: GoogleReview[] = []
+
+export const freshThisWeek = [
+  { name: 'Ontario Sweet Corn', note: 'Sweet, local and ready for the grill.', category: 'Ontario grown', photoKey: 'weekly-corn' },
+  { name: 'Ontario Peaches', note: 'Juicy seasonal favourites while supplies last.', category: 'In season', photoKey: 'weekly-peaches' },
+  { name: 'Fresh Bread', note: 'Fresh loaves for tonight’s dinner table.', category: 'Fresh today', photoKey: 'weekly-bread' },
+  { name: 'Seasonal Produce', note: 'See what is freshest when you visit today.', category: 'Market picks', photoKey: 'weekly-produce' },
+  { name: 'Italian Specials', note: 'Discover a new pantry favourite this week.', category: 'DeMarco’s pick', photoKey: 'weekly-italian' },
 ]
 
 export const gallery = [
-  ['https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1400&q=85', 'Fresh market produce displays'],
-  ['https://images.unsplash.com/photo-1579113800032-c38bd7635818?auto=format&fit=crop&w=900&q=85', 'Colourful seasonal vegetables'],
-  ['https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85', 'Fresh ingredients ready for dinner'],
-  ['https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85', 'Italian specialty foods'],
-  ['https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=900&q=85', 'Wine selection'],
+  ['gallery-storefront', "DeMarco's Fine Foods storefront — real photo coming soon"],
+  ['gallery-produce', "Fresh produce at DeMarco's — real photo coming soon"],
+  ['gallery-bread', "Fresh bread at DeMarco's — real photo coming soon"],
+  ['gallery-italian', "Italian specialties at DeMarco's — real photo coming soon"],
+  ['gallery-beer-wine', "Beer and wine selection at DeMarco's — real photo coming soon"],
 ]
