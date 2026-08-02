@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://demarcosfinefoods1-eng.github.io/demarcosfinefoods/sitemap.xml
