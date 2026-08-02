@@ -1,5 +1,6 @@
 import { Clock3, Facebook, Heart, Instagram, MapPin, Navigation, Phone, ShoppingBasket, Sparkles } from 'lucide-react'
 import { GoogleReviews } from '../components/GoogleReviews'
+import { GiftBasketsSection } from '../components/GiftBasketsSection'
 import { Header } from '../components/Header'
 import { MobileActions } from '../components/MobileActions'
 import { MotionReveal } from '../components/MotionReveal'
@@ -15,6 +16,8 @@ export default function HomePage() {
     <section className="hero"><PhotoPlaceholder photoKey="hero-storefront" alt="DeMarco's Fine Foods storefront in Windsor — hero photo coming soon" className="hero-image" priority /><div className="hero-overlay" /><div className="shell hero-content">
       <MotionReveal><div className="status-pill"><span className={status.open ? 'status-dot' : 'status-dot closed'} />{status.label}</div><p className="hero-kicker">On your way home? Dinner starts here.</p><h1>Fresh. Local.<br /><em>Convenient.</em></h1><p className="hero-sub">Fresh Produce <span>•</span> Beer & Wine <span>•</span> Italian Foods <span>•</span> Fresh Bread</p><p className="hero-copy">Skip the big-box trip. Pick up tonight's dinner in one quick neighbourhood stop on Grand Marais Road.</p><div className="hero-proof" aria-label="Why stop at DeMarco's today"><span><Clock3 />Open until {status.closesAt}</span><span><MapPin />1349 Grand Marais Rd W</span><span><ShoppingBasket />Dinner in one easy stop</span></div><div className="hero-actions"><a className="button" href={store.directionsUrl} target="_blank" rel="noreferrer"><Navigation size={20} /> Get Directions — Stop In</a><a className="button button-light" href="#fresh"><ShoppingBasket size={20} /> See What's Fresh</a></div></MotionReveal>
     </div></section>
+
+    <GiftBasketsSection />
 
     <WeeklyFresh />
 
