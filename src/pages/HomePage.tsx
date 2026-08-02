@@ -2,6 +2,7 @@ import { Clock3, Facebook, Heart, Instagram, MapPin, Navigation, Phone, Shopping
 import { GoogleReviews } from '../components/GoogleReviews'
 import { GiftBasketsSection } from '../components/GiftBasketsSection'
 import { Header } from '../components/Header'
+import { HeroCompositeImage } from '../components/HeroCompositeImage'
 import { MobileActions } from '../components/MobileActions'
 import { MotionReveal } from '../components/MotionReveal'
 import { PhotoPlaceholder } from '../components/PhotoPlaceholder'
@@ -13,7 +14,7 @@ import { useStoreStatus } from '../hooks/useStoreStatus'
 export default function HomePage() {
   const status = useStoreStatus()
   return <><Header /><main id="top">
-    <section className="hero"><PhotoPlaceholder photoKey="hero-storefront" alt="DeMarco's Fine Foods storefront in Windsor — hero photo coming soon" className="hero-image" priority /><div className="hero-overlay" /><div className="shell hero-content">
+    <section className="hero"><HeroCompositeImage /><div className="hero-overlay" /><div className="shell hero-content">
       <MotionReveal><div className="status-pill"><span className={status.open ? 'status-dot' : 'status-dot closed'} />{status.label}</div><p className="hero-kicker">Your quick Windsor stop for tonight's dinner</p><h1>Fresh. Local.<br /><em>Convenient.</em></h1><p className="hero-sub">Fresh Produce <span>•</span> Beer & Wine <span>•</span> Italian Foods <span>•</span> Fresh Bread</p><p className="hero-copy">Everything for dinner and drinks in one easy neighbourhood stop—without the big-box detour.</p><div className="hero-proof" aria-label="Why stop at DeMarco's today"><span><Clock3 />Open today until {status.closesAt}</span><span><MapPin />1349 Grand Marais Rd W</span><span><ShoppingBasket />Dinner and drinks in one stop</span></div><div className="hero-actions"><a className="button" href={store.directionsUrl} target="_blank" rel="noreferrer"><Navigation size={20} /> Stop In Today — Directions</a><a className="button button-light" href="#fresh"><ShoppingBasket size={20} /> See Today's Fresh Picks</a></div></MotionReveal>
     </div></section>
 
