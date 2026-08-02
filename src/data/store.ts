@@ -3,7 +3,7 @@ export const store = {
   phoneDisplay: '(519) 969-7887',
   phoneHref: 'tel:+15199697887',
   address: '1349 Grand Marais Rd W, Windsor, ON N9E 1E2',
-  directions: "https://www.google.com/maps/place/DeMarco%27s+Fine+Foods/",
+  directionsUrl: 'https://www.google.com/maps/dir/?api=1&origin=Current+Location&destination=1349+Grand+Marais+Rd+W,+Windsor,+ON+N9E+1E2',
   instagram: 'https://www.instagram.com/demarcosfinefoods/',
   facebook: 'https://www.facebook.com/demarcosfinefoods/',
 }
