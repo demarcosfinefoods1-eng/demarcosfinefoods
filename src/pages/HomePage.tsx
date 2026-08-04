@@ -9,9 +9,11 @@ import { PhotoPlaceholder } from '../components/PhotoPlaceholder'
 import { SectionHeading } from '../components/SectionHeading'
 import { WeeklyFresh } from '../components/WeeklyFresh'
 import { departments, gallery, googleReviews, store } from '../data/store'
+import { useHashScroll } from '../hooks/useHashScroll'
 import { useStoreStatus } from '../hooks/useStoreStatus'
 
 export default function HomePage() {
+  useHashScroll()
   const status = useStoreStatus()
   return <><Header /><main id="main-content" tabIndex={-1}>
     <section className="hero"><HeroCompositeImage /><div className="hero-overlay" /><div className="shell hero-content">
