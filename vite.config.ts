@@ -22,7 +22,7 @@ export default defineConfig({
     heroPreload,
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg'],
+      includeAssets: ['brand/favicon.svg', 'brand/favicon-32.png', 'brand/apple-touch-icon.png'],
       manifest: {
         name: "DeMarco's Fine Foods",
         short_name: "DeMarco's",
@@ -32,7 +32,10 @@ export default defineConfig({
         display: 'standalone',
         start_url: '/demarcosfinefoods/',
         icons: [
-          { src: 'favicon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any maskable' },
+          { src: 'brand/android-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
+          { src: 'brand/android-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
+          { src: 'brand/android-maskable-192.png', sizes: '192x192', type: 'image/png', purpose: 'maskable' },
+          { src: 'brand/android-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
         ],
       },
       workbox: {

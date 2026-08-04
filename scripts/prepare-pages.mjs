@@ -12,7 +12,7 @@ const giftBasketsPage = homepage
   .replace("DeMarco's Fine Foods | Fresh, Local & Convenient", "Custom Gift Baskets Windsor | DeMarco's Fine Foods")
   .replace('Fresh produce, fresh bread, Italian foods, beer and wine at your Windsor neighbourhood market. Visit DeMarco\'s today.', 'Custom corporate, holiday and gourmet gift baskets made in Windsor for every occasion and budget.')
   .replace('<meta property="og:url" content="https://demarcosfinefoods1-eng.github.io/demarcosfinefoods/" />', '<meta property="og:url" content="https://demarcosfinefoods1-eng.github.io/demarcosfinefoods/gift-baskets/" />')
-  .replaceAll('https://demarcosfinefoods1-eng.github.io/demarcosfinefoods/og.png', 'https://demarcosfinefoods1-eng.github.io/demarcosfinefoods/images/gift-baskets/italian-gourmet.jpg')
+  .replaceAll('https://demarcosfinefoods1-eng.github.io/demarcosfinefoods/brand/open-graph.png', 'https://demarcosfinefoods1-eng.github.io/demarcosfinefoods/images/gift-baskets/italian-gourmet.jpg')
   .replace("<meta name=\"twitter:title\" content=\"DeMarco's Fine Foods | Windsor, ON\" />", "<meta name=\"twitter:title\" content=\"Custom Gift Baskets Windsor | DeMarco's Fine Foods\" />")
   .replace('Fresh produce, fresh bread, Italian foods, beer and wine—right in your Windsor neighbourhood.', 'Custom corporate, holiday and gourmet gift baskets made in Windsor for every occasion and budget.')
 

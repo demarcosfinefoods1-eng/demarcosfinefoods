@@ -14,7 +14,7 @@ main[tabindex]:focus { outline:none; }
 .shell { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
 .site-header { position: fixed; inset: 0 0 auto; z-index: 50; height: 82px; background: rgba(255,255,255,.96); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(32,37,32,.08); }
 .header-inner { height: 82px; display:flex; align-items:center; justify-content:space-between; }
-.brand { display:flex; align-items:center; gap:10px; font: 600 19px/1 Poppins,sans-serif; color:#1f4428; }
+.brand { display:flex; align-items:center; flex:none; }
 .brand small { display:block; margin-top:5px; font: 600 9px/1 Inter,sans-serif; letter-spacing:.2em; text-transform:uppercase; color:#6a756c; }
 .brand-mark { display:grid; place-items:center; width:42px; height:42px; border-radius:50% 50% 44% 56%; background:var(--green); color:#fff; font:700 22px Poppins; transform:rotate(-5deg); }
 .brand-mark::first-letter { transform:rotate(5deg); }
@@ -62,3 +62,5 @@ footer{background:#102f1c;color:#fff;padding:75px 0 100px}.footer-grid{display:g
 .not-found{min-height:calc(100vh - 82px);margin-top:82px;display:grid;place-items:center;background:var(--cream);padding:80px 0}.not-found-card{max-width:760px;text-align:center}.not-found-card .eyebrow{color:var(--green);margin-top:0}.not-found-card h1{margin:0;font:600 clamp(42px,6vw,68px)/1.05 Poppins;letter-spacing:-.045em;color:var(--charcoal)}.not-found-card>p:not(.eyebrow){max-width:590px;margin:24px auto 0;color:#59645c;font-size:17px;line-height:1.7}.not-found-actions{display:flex;justify-content:center;gap:12px;margin-top:34px}.not-found-actions .button-secondary{background:var(--green);color:#fff}
 @media(max-width:640px){.not-found{min-height:calc(100vh - 70px);margin-top:70px;padding:55px 0 130px}.not-found-card h1{font-size:42px}.not-found-actions{display:grid}.not-found-actions .button{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+.brand-logo{width:auto;height:68px;max-width:106px;object-fit:contain}.footer-brand{display:inline-block}.footer-logo{width:190px;height:auto}.gift-page-footer{align-items:center}.gift-page-footer-logo{width:118px!important;min-height:auto!important}.gift-page-footer-logo img{width:118px;height:auto}
+@media(max-width:640px){.brand-logo{height:58px;max-width:89px}.gift-page-footer-logo{width:100px!important}.gift-page-footer-logo img{width:100px}}

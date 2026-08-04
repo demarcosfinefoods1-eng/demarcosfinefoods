@@ -7,7 +7,7 @@ const links = [['Gift Baskets', '/gift-baskets'], ['Departments', '/#departments
 export function Header() {
   const [open, setOpen] = useState(false)
   return <><a className="skip-link" href="#main-content">Skip to Main Content</a><header className="site-header"><div className="shell header-inner">
-    <Link to="/" className="brand" aria-label="DeMarco's Fine Foods home"><span className="brand-mark">D</span><span>DeMarco's<small>Fine Foods</small></span></Link>
+    <Link to="/" className="brand" aria-label="DeMarco's Fine Foods home"><img className="brand-logo" src="/demarcosfinefoods/brand/logo-nav.svg" alt="DeMarco's Fine Foods" width="860" height="560" /></Link>
     <nav className="desktop-nav" aria-label="Main navigation">{links.map(([label, href]) => <Link key={href} to={href}>{label}</Link>)}</nav>
     <a href={store.directionsUrl} target="_blank" rel="noreferrer" className="button button-small desktop-call"><Navigation size={17} /> Get Directions</a>
     <button className="menu-button" onClick={() => setOpen(!open)} aria-label="Toggle navigation" aria-expanded={open}>{open ? <X /> : <Menu />}</button>
