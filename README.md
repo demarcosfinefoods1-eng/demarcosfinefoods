@@ -1,5 +1,17 @@
 # DeMarco's Fine Foods
 
+## Switching the seasonal homepage hero
+
+The homepage hero is controlled by `src/data/hero.ts`. Set `activeHeroSeason` to one of:
+
+- `default`
+- `summer`
+- `fall`
+- `christmas`
+- `spring`
+
+The current approved store-interior photograph is the fallback for every season. To add a new seasonal photograph, export responsive `-800`, `-1200`, and `-1600` JPEG and WebP files into `public/images/store`, then update that season's `image` basename and alt text in `src/data/hero.ts`. No component or layout changes are required.
+
 A fast, mobile-first local grocery website designed to turn nearby searches into same-day store visits. Built with React 19, Vite, Tailwind CSS, React Router, Framer Motion, Lucide React, and PWA support.
 
 ## Local development

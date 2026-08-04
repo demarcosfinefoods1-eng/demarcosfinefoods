@@ -27,9 +27,9 @@ export const giftBasketOccasions = [
 ]
 
 export const departments = [
-  { title: 'Fresh Produce', text: 'Crisp, colourful and ready for tonight’s table.', photoKey: 'departments-produce', alt: "DeMarco's fresh produce display — store photo coming soon" },
-  { title: 'Beer & Wine', text: 'A convenient local selection for dinner and gatherings.', photoKey: 'departments-beer-wine', alt: "DeMarco's beer and wine selection — store photo coming soon" },
-  { title: 'Italian Foods', text: 'Pantry favourites and authentic flavours close to home.', photoKey: 'departments-italian', alt: "DeMarco's Italian foods selection — store photo coming soon" },
+  { title: 'Fresh Produce', text: 'Crisp, colourful and ready for tonight’s table.', photoKey: 'produce-display', alt: "Fresh tomatoes, carrots, celery and vegetables on DeMarco's wood produce display" },
+  { title: 'Beer & Wine', text: 'A convenient local selection for dinner and gatherings.', photoKey: 'beer-wine', alt: "Locally crafted beer and wine selection inside DeMarco's Fine Foods in Windsor" },
+  { title: 'Italian Foods', text: 'Pantry favourites and authentic flavours close to home.', photoKey: 'italian-pantry', alt: "Italian olive oils, sauces and pantry staples beside fresh produce at DeMarco's" },
 ]
 
 export type GoogleReview = {
@@ -43,17 +43,17 @@ export type GoogleReview = {
 export const googleReviews: GoogleReview[] = []
 
 export const freshThisWeek = [
-  { name: 'Ontario Sweet Corn', note: 'Sweet, local and ready for the grill.', category: 'Ontario grown', photoKey: 'weekly-corn' },
-  { name: 'Ontario Peaches', note: 'Juicy seasonal favourites while supplies last.', category: 'In season', photoKey: 'weekly-peaches' },
-  { name: 'Fresh Bread', note: 'Fresh loaves for tonight’s dinner table.', category: 'Fresh today', photoKey: 'weekly-bread' },
-  { name: 'Seasonal Produce', note: 'See what is freshest when you visit today.', category: 'Market picks', photoKey: 'weekly-produce' },
-  { name: 'Italian Specials', note: 'Discover a new pantry favourite this week.', category: 'DeMarco’s pick', photoKey: 'weekly-italian' },
+  { name: 'Ontario Sweet Corn', note: 'Sweet, local and ready for the grill.', category: 'Ontario grown', photoKey: 'weekly-corn', alt: "Carts filled with fresh Ontario sweet corn inside DeMarco's Fine Foods" },
+  { name: 'Colourful Bell Peppers', note: 'Crisp red, orange and yellow peppers for tonight.', category: 'Fresh produce', photoKey: 'weekly-peppers', alt: "Fresh red, orange and yellow bell peppers at DeMarco's Fine Foods" },
+  { name: 'Fresh Bread', note: 'Fresh loaves for tonight’s dinner table.', category: 'Fresh today', photoKey: 'bread-display', alt: "Lakeside fruit and cinnamon apple breads on the shelf at DeMarco's" },
+  { name: 'Market Tomatoes', note: 'Bright, ripe tomatoes ready for salads and sauces.', category: 'Market picks', photoKey: 'weekly-tomatoes', alt: "Fresh red tomatoes displayed at DeMarco's Fine Foods in Windsor" },
+  { name: 'Italian Pantry Picks', note: 'Discover a new Italian pantry favourite this week.', category: 'DeMarco’s pick', photoKey: 'italian-pantry', alt: "Italian olive oil, sauces and pantry staples available at DeMarco's" },
 ]
 
 export const gallery = [
-  ['gallery-storefront', "DeMarco's Fine Foods storefront — real photo coming soon"],
-  ['gallery-produce', "Fresh produce at DeMarco's — real photo coming soon"],
-  ['gallery-bread', "Fresh bread at DeMarco's — real photo coming soon"],
-  ['gallery-italian', "Italian specialties at DeMarco's — real photo coming soon"],
-  ['gallery-beer-wine', "Beer and wine selection at DeMarco's — real photo coming soon"],
+  ['store-interior', "The welcoming aisle and fresh bread display inside DeMarco's Fine Foods"],
+  ['produce-display', "Fresh produce on DeMarco's wood market displays in Windsor"],
+  ['bread-sourdough', "A fresh Lakeside San Francisco sourdough loaf at DeMarco's"],
+  ['italian-pantry', "Italian pantry staples and fresh produce inside DeMarco's"],
+  ['beer-wine', "Locally crafted beer and wine selection at DeMarco's Fine Foods"],
 ]
