@@ -7,7 +7,7 @@ import { MotionReveal } from '../components/MotionReveal'
 import { giftBasketOccasions, giftBaskets, store } from '../data/store'
 import { usePageSeo } from '../hooks/usePageSeo'
 
-const canonical = 'https://demarcosfinefoods1-eng.github.io/demarcosfinefoods/gift-baskets/'
+const canonical = `${store.siteUrl}gift-baskets/`
 
 export default function GiftBasketsPage() {
   usePageSeo({
