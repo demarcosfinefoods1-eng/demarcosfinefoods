@@ -42,6 +42,7 @@ export default defineConfig({
       },
       workbox: {
         navigateFallback: '/index.html',
+        navigateFallbackDenylist: [/^\/sitemap\.xml$/, /^\/robots\.txt$/],
         runtimeCaching: [{
           urlPattern: /\/images\/.*\.(?:avif|webp|jpe?g|png|svg)$/,
           handler: 'CacheFirst',
