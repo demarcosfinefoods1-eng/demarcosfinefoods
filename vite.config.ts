@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import { activeHero } from './src/data/hero'
 
-const base = '/demarcosfinefoods/'
+const base = '/'
 
 const heroPreload = {
   name: 'demarcos-hero-preload',
@@ -30,7 +30,9 @@ export default defineConfig({
         theme_color: '#2F6D3C',
         background_color: '#ffffff',
         display: 'standalone',
-        start_url: '/demarcosfinefoods/',
+        id: '/',
+        start_url: '/',
+        scope: '/',
         icons: [
           { src: 'brand/android-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
           { src: 'brand/android-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
@@ -39,9 +41,9 @@ export default defineConfig({
         ],
       },
       workbox: {
-        navigateFallback: '/demarcosfinefoods/index.html',
+        navigateFallback: '/index.html',
         runtimeCaching: [{
-          urlPattern: /\/demarcosfinefoods\/images\/.*\.(?:avif|webp|jpe?g|png|svg)$/,
+          urlPattern: /\/images\/.*\.(?:avif|webp|jpe?g|png|svg)$/,
           handler: 'CacheFirst',
           options: { cacheName: 'demarcos-images', expiration: { maxEntries: 80, maxAgeSeconds: 60 * 60 * 24 * 30 } },
         }],

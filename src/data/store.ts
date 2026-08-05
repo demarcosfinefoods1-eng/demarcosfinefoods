@@ -1,6 +1,6 @@
 export const store = {
   name: "DeMarco's Fine Foods",
-  siteUrl: 'https://demarcosfinefoods1-eng.github.io/demarcosfinefoods/',
+  siteUrl: 'https://demarcosfinefoods.ca/',
   phoneDisplay: '(519) 969-7887',
   phoneHref: 'tel:+15199697887',
   address: '1349 Grand Marais Rd W, Windsor, ON N9E 1E2',

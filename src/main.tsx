@@ -12,7 +12,7 @@ registerSW({ immediate: true })
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter basename="/demarcosfinefoods">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Suspense fallback={<div className="min-h-screen bg-[#f7f7f2]" aria-label="Loading" />}>
         <Routes><Route path="/" element={<HomePage />} /><Route path="/gift-baskets" element={<GiftBasketsPage />} /><Route path="*" element={<NotFoundPage />} /></Routes>
       </Suspense>
