@@ -4,6 +4,7 @@ import { Header } from '../components/Header'
 import { MobileActions } from '../components/MobileActions'
 import { store } from '../data/store'
 import { usePageSeo } from '../hooks/usePageSeo'
+import { trackCta } from '../lib/analytics'
 
 export default function NotFoundPage() {
   usePageSeo({
@@ -21,8 +22,8 @@ export default function NotFoundPage() {
         <h1>Let’s get you back to DeMarco’s.</h1>
         <p>Visit the homepage to see what’s fresh, or get directions straight to our Windsor store.</p>
         <div className="not-found-actions">
-          <Link className="button" to="/"><Home size={19} /> Return Home</Link>
-          <a className="button button-secondary" href={store.directionsUrl} target="_blank" rel="noreferrer"><Navigation size={19} /> Get Directions</a>
+          <Link className="button" to="/"><Home size={19} aria-hidden="true" /> Return Home</Link>
+          <a className="button button-secondary" href={store.directionsUrl} target="_blank" rel="noreferrer" onClick={() => trackCta('directions_click', 'not_found')}><Navigation size={19} aria-hidden="true" /> Get Directions</a>
         </div>
       </div>
     </main>

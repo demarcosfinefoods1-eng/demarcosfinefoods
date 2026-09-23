@@ -1,12 +1,14 @@
 import { ArrowRight } from 'lucide-react'
-import { freshThisWeek, store } from '../data/store'
+import { freshContentLastUpdated, freshItems } from '../data/content'
+import { store } from '../data/store'
+import { trackCta } from '../lib/analytics'
 import { MotionReveal } from './MotionReveal'
 import { PhotoPlaceholder } from './PhotoPlaceholder'
 import { SectionHeading } from './SectionHeading'
 
 export function WeeklyFresh() {
   return <section id="fresh" className="section weekly-section" aria-labelledby="weekly-title"><div className="shell">
-    <div className="weekly-heading"><SectionHeading eyebrow="Last Updated August 3" title="Recent Fresh Picks" titleId="weekly-title" body="Recently photographed at DeMarco's. Selection changes daily—call ahead for current availability." /><a href={store.directionsUrl} target="_blank" rel="noreferrer">Get Directions <ArrowRight size={18} /></a></div>
-    <div className="weekly-grid">{freshThisWeek.map((item) => <MotionReveal className="weekly-card" key={item.name}><PhotoPlaceholder photoKey={item.photoKey} alt={item.alt} /><div><span>{item.category}</span><h3>{item.name}</h3><p>{item.note}</p><a href={store.phoneHref}>Call to check availability <ArrowRight size={16} /></a></div></MotionReveal>)}</div>
+    <div className="weekly-heading"><SectionHeading eyebrow={`Fresh picks updated ${freshContentLastUpdated}`} title="Fresh at DeMarco's" titleId="weekly-title" body="A look at recent and seasonal favourites photographed in store. Selection changes—check in store for current availability." /><a href={store.directionsUrl} target="_blank" rel="noreferrer" onClick={() => trackCta('directions_click', 'fresh_section')}>Get Directions <ArrowRight size={18} aria-hidden="true" /></a></div>
+    <div className="weekly-grid">{freshItems.map((item) => <MotionReveal className="weekly-card" key={item.name}><PhotoPlaceholder photoKey={item.image} alt={item.alt} /><div><span>{item.badge} · {item.category}</span><h3>{item.name}</h3><p>{item.description}</p><a href={store.phoneHref} onClick={() => { trackCta('fresh_item_click', 'fresh_card', { item_name: item.name }); trackCta('call_click', 'fresh_card', { item_name: item.name }) }}>Ask about this fresh pick <ArrowRight size={16} aria-hidden="true" /></a></div></MotionReveal>)}</div>
   </div></section>
 }
