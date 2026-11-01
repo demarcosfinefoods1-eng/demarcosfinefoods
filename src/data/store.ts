@@ -29,6 +29,8 @@ export const store = {
   postalCode: 'N9E 1E2',
   country: 'CA',
   address: '1349 Grand Marais Rd W, Windsor, ON N9E 1E2',
+  neighbourhood: 'South Windsor',
+  shoppingCentre: 'Yorktown Square',
   coordinates: { latitude: 42.2678366, longitude: -83.0265929 },
   timeZone: 'America/Toronto',
   hours: {
@@ -66,6 +68,17 @@ export const giftBasketOccasions = [
   'Holidays',
   'Italian Gourmet Gift Baskets',
   'Made to your budget',
+]
+
+export const holidayGiftBasketOccasions = [
+  'Christmas & Holiday Gifts',
+  'Host Gifts',
+  'Family & Friends',
+  'Corporate Gifts',
+  'Client Appreciation',
+  'Employee Gifts',
+  'Thank You Gifts',
+  'Custom Gift Baskets',
 ]
 
 export const departments = [

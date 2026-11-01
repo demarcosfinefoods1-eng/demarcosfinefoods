@@ -33,6 +33,7 @@ const localBusinessSchema = {
     postalCode: store.postalCode,
     addressCountry: store.country,
   },
+  containedInPlace: { '@type': 'ShoppingCenter', name: store.shoppingCentre },
   geo: { '@type': 'GeoCoordinates', ...store.coordinates },
   hasMap: store.googleBusinessUrl,
   sameAs: [store.instagram, store.facebook],
@@ -42,8 +43,7 @@ const localBusinessSchema = {
     opens: hours.opens,
     closes: hours.closes,
   })),
-  areaServed: { '@type': 'City', name: 'Windsor, Ontario' },
-  priceRange: '$$',
+  areaServed: { '@type': 'City', name: `${store.city}, Ontario` },
 }
 
 const seoSchema = {
