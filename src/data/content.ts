@@ -7,14 +7,13 @@ export type FreshItem = {
   badge: 'Seasonal favourite' | 'Fresh pick' | 'Store favourite'
 }
 
-export const freshContentLastUpdated = 'September 2026'
+export const freshContentLastUpdated = 'November 2026'
 
 export const freshItems: FreshItem[] = [
-  { name: 'Ontario Sweet Corn', category: 'Produce', description: 'A seasonal favourite photographed in store at DeMarco’s.', image: 'weekly-corn', alt: "Carts filled with Ontario sweet corn inside DeMarco's Fine Foods", badge: 'Seasonal favourite' },
-  { name: 'Colourful Bell Peppers', category: 'Produce', description: 'Crisp red, orange and yellow peppers from our produce selection.', image: 'weekly-peppers', alt: "Fresh red, orange and yellow bell peppers at DeMarco's Fine Foods", badge: 'Fresh pick' },
-  { name: 'Fresh Bread', category: 'Bakery', description: 'Fresh loaves photographed on DeMarco’s bread display.', image: 'bread-display', alt: "Lakeside fruit and cinnamon apple breads on the shelf at DeMarco's", badge: 'Store favourite' },
-  { name: 'Market Tomatoes', category: 'Produce', description: 'Bright tomatoes for salads, sandwiches and sauces.', image: 'weekly-tomatoes', alt: "Fresh red tomatoes displayed at DeMarco's Fine Foods in Windsor", badge: 'Fresh pick' },
-  { name: 'Italian Pantry Picks', category: 'Italian Foods', description: 'Discover pantry favourites among our Italian and specialty foods.', image: 'italian-pantry-weekly', alt: "Jars of Italian olives and preserved vegetables on display at DeMarco's", badge: 'Store favourite' },
+  { name: 'Seasonal Produce', category: 'Produce', description: 'Explore colourful produce for everyday meals and seasonal cooking.', image: 'produce-display', alt: "Seasonal produce displayed on DeMarco's wood market tables", badge: 'Seasonal favourite' },
+  { name: 'Fresh Bread', category: 'Bakery', description: 'Find fresh loaves and bakery favourites on the in-store bread display.', image: 'bread-display', alt: "Lakeside fruit and cinnamon apple breads on the shelf at DeMarco's", badge: 'Store favourite' },
+  { name: 'Italian Pantry Favourites', category: 'Italian Foods', description: 'Discover pasta, sauces, olives and preserved foods for your table.', image: 'italian-pantry-weekly', alt: "Jars of Italian olives and preserved vegetables on display at DeMarco's", badge: 'Store favourite' },
+  { name: 'Specialty Finds', category: 'Pantry', description: 'Browse distinctive pantry items and imported specialty foods in store.', image: 'italian-pantry-gallery', alt: "Imported and specialty pantry foods displayed at DeMarco's Fine Foods", badge: 'Store favourite' },
 ]
 
 export type LocalBrand = {
